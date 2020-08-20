@@ -12,24 +12,24 @@ const AddPlayerModal = ({ addPlayer }) => {
     addPlayer(newPlayer);
     setNombre('');
     setLegajo('');
-  };  
+  };
 
   const playerNameHandler = (e) => {
     let regex = /\d/g;
-    if(e.target.value !== "" && regex.test(e.target.value)) {
-      alert("El nombre no puede incluir números")
+    if (e.target.value !== '' && regex.test(e.target.value)) {
+      alert('El nombre no puede incluir números');
     } else {
-      setNombre(e.target.value)
-    }    
-  }
+      setNombre(e.target.value);
+    }
+  };
 
   const legajoHandler = (e) => {
-    if(e.target.value !== "" && !Number(e.target.value)) {
-      alert("El legajo solo puede incluir números")
+    if (e.target.value !== '' && !Number(e.target.value)) {
+      alert('El legajo solo puede incluir números');
     } else {
-    setLegajo(e.target.value)
+      setLegajo(e.target.value);
     }
-  }
+  };
 
   return (
     <div id="add-player-modal" className="modal">

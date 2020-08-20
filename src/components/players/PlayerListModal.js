@@ -19,8 +19,20 @@ const PlayerListModal = ({ players, setPlayers }) => {
       <div className="modal-content">
         <h4>Lista de Jugadores</h4>
         <ul className="collection">
-          {players.length === 0 ? <h4 style={{margin: "25px 25px" , fontSize: "25px", textAlign:"center"}}> No hay jugadores registrados </h4> :
-            players.map((p) => <PlayerItem player={p} key={p.legajo} />)}
+          {players.length === 0 ? (
+            <h4
+              style={{
+                margin: '25px 25px',
+                fontSize: '25px',
+                textAlign: 'center',
+              }}
+            >
+              {' '}
+              No hay jugadores registrados{' '}
+            </h4>
+          ) : (
+            players.map((p) => <PlayerItem player={p} key={p.legajo} />)
+          )}
         </ul>
       </div>
     </div>

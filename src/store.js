@@ -4,10 +4,6 @@ import rootReducer from './reducers';
 
 const initialState = {};
 
-const store = createStore(
-  rootReducer,
-  initialState,
-  composeWithDevTools()
-);
+const store = createStore(rootReducer, initialState, composeWithDevTools());
 
 export default store;
