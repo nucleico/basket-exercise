@@ -1,0 +1,6 @@
+.shotContainer:nth-child(odd) {
+  background-color: rgb(193, 193, 201) !important;
+}
+.shotList {
+  margin-left: '20px';
+}

@@ -1,0 +1,6 @@
+export const ADD_PLAYER = "ADD_PLAYER"
+export const ADD_SHOT = "ADD_SHOT"
+export const GET_PLAYERS = "GET_PLAYERS"
+export const DELETE_SHOT = "DELETE_SHOT"
+export const DELETE_PLAYER = "DELETE_PLAYER"
+export const SET_PLAYERS = "SET_PLAYERS"
