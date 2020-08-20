@@ -5,13 +5,17 @@ import PlayerItem from './PlayerItem';
 
 const PlayerListModal = ({ players, setPlayers }) => {
   useEffect(() => {
+    
     const data = sessionStorage.getItem('Players');
-    setPlayers(JSON.parse(data));
+    if (data !== null) {
+      setPlayers(JSON.parse(data));
+    }    
+    
     //eslint-disable-next-line
   }, []);
 
-  useEffect(() => {
-    sessionStorage.setItem('Players', JSON.stringify(players));
+  useEffect(() => {    
+    sessionStorage.setItem('Players', JSON.stringify(players));    
   });
 
   return (
@@ -19,7 +23,7 @@ const PlayerListModal = ({ players, setPlayers }) => {
       <div className="modal-content">
         <h4>Lista de Jugadores</h4>
         <ul className="collection">
-          {players.length === 0 ? (
+          {players == null ? (
             <h4
               style={{
                 margin: '25px 25px',

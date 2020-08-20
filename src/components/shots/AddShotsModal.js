@@ -46,7 +46,7 @@ const AddShotsModal = ({ addShot, players }) => {
             <option value="" disabled>
               Seleccionar
             </option>
-            {players.length > 0 &&
+            {players !== null &&
               players.map((p) => <option key={p.legajo}>{p.nombre}</option>)}
           </select>
         </div>
